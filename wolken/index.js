@@ -1,60 +1,48 @@
-const x = (n) => width * n;
-const y = (n) => height * n;
-const s = (n) => (height > width ? height * n : width * n);
+const canvas = document.getElementById("cloudCanvas");
+const ctx = canvas.getContext("2d");
 
-let myPrimaryColor;
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-function setup() {
-  createCanvas(windowWidth, windowHeight);  
-  
-  colorMode(HSL, 360, 100, 100, 100);
-  myPrimaryColor = color(380, 93, 0);  
-}
+class StratusCloud {
+  constructor() {
 
-function draw() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height * 0.3 + 0.2 * canvas.height;
+    this.width = Math.random() * 300 + 500; 
+    this.height = Math.random() * 50 + 30; 
+    this.speed = Math.random() * 0.2 + 0.1;
+    this.color = "rgba(169, 169, 169, 0.8)"; 
+  }
 
-  background(myPrimaryColor);  
+  draw() {
+    ctx.beginPath();
+    ctx.fillStyle = this.color;
+    ctx.ellipse(this.x, this.y, this.width / 2, this.height / 2, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
 
-  const secondaryColor = color((hue(myPrimaryColor) + 750) % 9500, 90, 50);
-
-  fill(secondaryColor);  
-  strokeWeight(0);  
-
-  quad(x(0.55), y(0.15), x(0.75), x(0.2125), x(0.75), y(0.55), x(0.575), y(0.5));
-  quad(x(0.575), y(0.5), x(0.75), y(0.55), x(0.375), y(0.925), x(0.05), y(0.775));
-
-  fill(myPrimaryColor); 
-  strokeWeight(0);  
-
-
-  circle(x(0.65), y(0.275), s(0.037));
-  triangle(x(0.625), y(0.5125), x(0.63), y(0.41), x(0.65), y(0.41));
-  triangle(x(0.6625), y(0.525), x(0.645), y(0.41), x(0.665), y(0.41));
-  
-  quad(x(0.625), y(0.5125), x(0.6625), y(0.525), x(0.575), y(0.75), x(0.25), y(0.75));
-
-  beginShape();
-  vertex(x(0.625), y(0.2875));
-  vertex(x(0.675), y(0.2975));
-  vertex(x(0.6875), y(0.4));
-  vertex(x(0.675), y(0.375));
-  vertex(x(0.675), y(0.4175));
-  vertex(x(0.625), y(0.41));
-  vertex(x(0.6275), y(0.355));
-  vertex(x(0.6125), y(0.375));
-  endShape(CLOSE);
-}
-
-
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);  
-  background(myPrimaryColor);  
-}
-
-
-function keyPressed() {
-  if (key === 's') {
-    const name = prompt('Enter name', `out-${Date.now()}.png`);
-    save(name);  
+  update() {
+    this.x += this.speed;
+    if (this.x - this.width / 2 > canvas.width) {
+      this.x = -this.width / 2; 
+      this.y = Math.random() * canvas.height * 0.3 + 0.2 * canvas.height;
+    }
   }
 }
+
+let clouds = [];
+for (let i = 0; i < 10; i++) {
+  clouds.push(new StratusCloud());
+}
+
+function animate() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  clouds.forEach(cloud => {
+    cloud.update();
+    cloud.draw();
+  });
+  requestAnimationFrame(animate);
+}
+
+animate();
