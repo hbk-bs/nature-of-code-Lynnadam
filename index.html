@@ -1,141 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>index</title>
-	<style>
-		body, html {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  background: #f0f0f0;
-  color: #333;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wolken-Darstellungen</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      color: #333;
+    }
 
-header {
-  text-align: center;
-  padding: 50px 20px;
-  background: #87ceeb;
-}
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #87ceeb;
+    }
 
-header h1 {
-  font-size: 3em;
-  color: white;
-}
+    header h1 {
+      font-size: 3em;
+      color: white;
+    }
 
-header p {
-  font-size: 1.2em;
-  color: white;
-}
+    header p {
+      font-size: 1.2em;
+      color: white;
+    }
 
-nav {
-  text-align: center;
-  margin: 20px 0;
-}
+    section {
+      margin: 20px auto;
+      max-width: 650px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-}
+    section:hover {
+      transform: scale(1.02);
+    }
 
-nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
+    section h2 {
+      font-size: 2em;
+      color: #555;
+      padding: 15px;
+      margin: 0;
+      background: #ffffff;
+      color: rgb(82, 82, 82);
+      text-align: center;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  font-size: 1.2em;
-  color: #333;
-}
+    section p {
+      font-size: 1.1em;
+      color: #555;
+      padding: 15px;
+      margin: 0;
+      text-align: center;
+    }
 
-section {
-  padding: 30px 20px;
-  margin: 20px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
+    .iframe-container {
+      position: relative;
+      padding-top: 56.25%; 
+      overflow: hidden;
+      border-top: 2px solid #87ceeb;
+    }
 
-section h2 {
-  font-size: 2.5em;
-  color: #333;
-}
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-bottom: 4px solid #87ceeb;
+    }
 
-section p {
-  font-size: 1.2em;
-  color: #666;
-}
-
-.btn {
+    a {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #87ceeb;
-  color: white;
+  margin: 10px auto;
   text-decoration: none;
-  border-radius: 5px;
-  font-size: 1.2em;
-}
-
-.btn:hover {
-  background-color: #00bfff;
-}
-
-footer {
+  font-size: 2em;
+  color: #87ceeb;
+  transition: color 0.3s, transform 0.3s;
   text-align: center;
-  padding: 20px 0;
-  background: #333;
-  color: white;
+  margin-left: 10px;
 }
 
-	</style>
+a:hover {
+  color: #4682b4;
+  transform: scale(1.2);
+}
+
+  </style>
+</head>
 <body>
-	<header>
-	  <h1>Wolken-Darstellungen</h1>
-	  <p>Eine Beobachtung von verschiedenen Wolkentypen und ihre Darstellung durch Code.</p>
-	</header>
+
+  <header>
+    <h1>Wolken-Darstellungen</h1>
+    <p>Eine Beobachtung von verschiedenen Wolkentypen und ihre Darstellung durch Code.</p>
+  </header>
   
-  
-	<section id="cumulus">
-	  <h2>Cumulus Wolken</h2>
-	  <p>Cumuluswolken sind die klassischen weißen, fluffigen Wolken, die oft mit schönen, sonnigen Tagen verbunden sind.</p>
-	  <a href="" target="_blank" class="btn">Demo für Cumulus Wolken </a>
-	</section>
-  
-	<section id="stratus">
-	  <h2>Stratus Wolken</h2>
-	  <p>Stratuswolken sind flache, graue Wolken, die den Himmel oft mit einer gleichmäßigen Schicht bedecken und häufig Nieselregen bringen.</p>
-	  <a href="stratus-wolken/index.html" target="_blank" class="btn">Demo für Stratus Wolken</a>
-	</section>
-  
-	<section id="cirrus">
-	  <h2>Cirrus Wolken</h2>
-	  <p>Cirruswolken sind dünne, federartige Wolken, die sich in großer Höhe und bei schönem Wetter am Himmel zeigen.</p>
-	  <a href="" target="_blank" class="btn">Demo für Cirrus Wolken</a>
-	</section>
-  
-	<section id="altocumulus">
-	  <h2>Altocumulus Wolken</h2>
-	  <p>Altocumuluswolken sind weiß bis graue, schichtartige Wolken, die in mittlerer Höhe des Himmels auftreten.</p>
-	  <a href="" target="_blank" class="btn">Demo für Altocumulus Wolken</a>
-	</section>
-  
-	<section id="nimbostratus">
-	  <h2>Nimbostratus Wolken</h2>
-	  <p>Nimbostratuswolken sind dichte, dunkle Wolken, die oft mit Regen oder Schneefall verbunden sind und den Himmel vollständig bedecken.</p>
-	  <a href="" target="_blank" class="btn">Demo für Nimbostratus Wolken</a>
-	</section>
-  
-	
-  </body>
-  
-  </html>
-<div id="sketch"></div>
-<script src="lib/p5.min.js"></script>
-<script src="index.js"></script>
-</main>
+  <section id="cumulus">
+    <h2>Cumulus Wolken</h2>
+    <p>Cumuluswolken sind die klassischen weißen, fluffigen Wolken, die oft mit schönen, sonnigen Tagen verbunden sind.</p>
+    <div class="iframe-container">
+      <iframe src="cumulus-wolken/index.html" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="stratus">
+    <h2>Stratus Wolken</h2>
+    <p>Stratuswolken sind flache, graue Wolken, die den Himmel oft mit einer gleichmäßigen Schicht bedecken und häufig Nieselregen bringen.</p>
+    <div class="iframe-container">
+      <iframe src="stratus-wolken/index.html" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="cirrus">
+    <h2>Cirrus Wolken</h2>
+    <p>Cirruswolken sind dünne, federartige Wolken, die sich in großer Höhe und bei schönem Wetter am Himmel zeigen.</p>
+    <div class="iframe-container">
+      <iframe src="cirrus-wolken/index.html" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="altocumulus">
+    <h2>Altocumulus Wolken</h2>
+    <p>Altocumuluswolken sind weiß bis graue, schichtartige Wolken, die in mittlerer Höhe des Himmels auftreten.</p>
+    <div class="iframe-container">
+      <iframe src="altocumulus-wolken/index.html" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="nimbostratus">
+    <h2>Nimbostratus Wolken</h2>
+    <p>Nimbostratuswolken sind dichte, dunkle Wolken, die oft mit Regen oder Schneefall verbunden sind und den Himmel vollständig bedecken.</p>
+    <div class="iframe-container">
+      <iframe src="nimbostratus-wolken/index.html" loading="lazy"></iframe>
+    </div>
+  </section>
+
+  <section id="cumulus-inter">
+    <h2>Übersetzung</h2>
+   
+    
+    <div class="iframe-container">
+      <iframe src="cumulus-inter/index.html" loading="lazy"></iframe>
+    </div>
+    <a href="cumulus-inter/index.html" target="_blank">►</a>
+  </section>
+
 
 </body>
 </html>
