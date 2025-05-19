@@ -94,6 +94,28 @@ a:hover {
   transform: scale(1.2);
 }
 
+.image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .image-gallery img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
   </style>
 </head>
 <body>
@@ -152,7 +174,14 @@ a:hover {
     </div>
     <a href="cumulus-inter/index.html" target="_blank">►</a>
   </section>
-
+  <section id="nimbostratus">
+    <h2>Reflektion</h2>
+    <p>In diesem Projekt habe ich verschiedene Wolkentypen beobachtet und ihre charakteristischen Formen, Farben und Bewegungen analysiert. Ziel war es, diese natürlichen Phänomene in abstrakter Weise mithilfe von Code darzustellen. Der Schwerpunkt meiner Arbeit lag dabei auf der sogenannten "Übersetzung" – einer kreativen Auseinandersetzung mit den beobachteten Eindrücken. Durch die Fokussierung auf Bewegung und Farbe entstanden digitale Muster, die nicht nur visuell ansprechend sind, sondern auch das Wesentliche der jeweiligen Wolkenformation einfangen. Diese Verbindung von Naturbeobachtung und algorithmischer Gestaltung bildete den Kern meiner gestalterischen Auseinandersetzung.</p>
+    <div class="image-gallery">
+      <img src="https://hbk-bs.github.io/the-archives-Lynnadam/assets/images/IMG_6852.jpg" alt="Wolkenbild 1">
+      <img src="https://hbk-bs.github.io/the-archives-Lynnadam/assets/images/IMG_6857.jpg" alt="Wolkenbild 3">
+    </div>
+  </section>
 
 </body>
 </html>
