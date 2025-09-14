@@ -1,187 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wolken-Darstellungen</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      color: #333;
-    }
-
-    header {
-      text-align: center;
-      padding: 50px 20px;
-      background: #87ceeb;
-    }
-
-    header h1 {
-      font-size: 3em;
-      color: white;
-    }
-
-    header p {
-      font-size: 1.2em;
-      color: white;
-    }
-
-    section {
-      margin: 20px auto;
-      max-width: 650px;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    section:hover {
-      transform: scale(1.02);
-    }
-
-    section h2 {
-      font-size: 2em;
-      color: #555;
-      padding: 15px;
-      margin: 0;
-      background: #ffffff;
-      color: rgb(82, 82, 82);
-      text-align: center;
-    }
-
-    section p {
-      font-size: 1.1em;
-      color: #555;
-      padding: 15px;
-      margin: 0;
-      text-align: center;
-    }
-
-    .iframe-container {
-      position: relative;
-      padding-top: 56.25%; 
-      overflow: hidden;
-      border-top: 2px solid #87ceeb;
-    }
-
-    iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-      border-bottom: 4px solid #87ceeb;
-    }
-
-    a {
-  display: inline-block;
-  margin: 10px auto;
-  text-decoration: none;
-  font-size: 2em;
-  color: #87ceeb;
-  transition: color 0.3s, transform 0.3s;
-  text-align: center;
-  margin-left: 10px;
-}
-
-a:hover {
-  color: #4682b4;
-  transform: scale(1.2);
-}
-
-.image-gallery {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-      padding: 20px;
-    }
-
-    .image-gallery img {
-      width: 100%;
-      max-width: 200px;
-      height: auto;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .image-gallery img:hover {
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-    }
-
-  </style>
+  <title>Lynn’s Archiv 2025</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <header>
-    <h1>Wolken-Darstellungen</h1>
-    <p>Eine Beobachtung von verschiedenen Wolkentypen und ihre Darstellung durch Code.</p>
+    <div class="header-content">
+      <h1>Lynn’s Archiv</h1>
+      <p class="subtitle">Seminar · Fundamentals of Digital Communication · 2025</p>
+    </div>
   </header>
-  
-  <section id="cumulus">
-    <h2>Cumulus Wolken</h2>
-    <p>Cumuluswolken sind die klassischen weißen, fluffigen Wolken, die oft mit schönen, sonnigen Tagen verbunden sind.</p>
-    <div class="iframe-container">
-      <iframe src="cumulus-wolken/index.html" loading="lazy"></iframe>
-    </div>
-  </section>
 
-  <section id="stratus">
-    <h2>Stratus Wolken</h2>
-    <p>Stratuswolken sind flache, graue Wolken, die den Himmel oft mit einer gleichmäßigen Schicht bedecken und häufig Nieselregen bringen.</p>
-    <div class="iframe-container">
-      <iframe src="stratus-wolken/index.html" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <section id="cirrus">
-    <h2>Cirrus Wolken</h2>
-    <p>Cirruswolken sind dünne, federartige Wolken, die sich in großer Höhe und bei schönem Wetter am Himmel zeigen.</p>
-    <div class="iframe-container">
-      <iframe src="cirrus-wolken/index.html" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <section id="altocumulus">
-    <h2>Altocumulus Wolken</h2>
-    <p>Altocumuluswolken sind weiß bis graue, schichtartige Wolken, die in mittlerer Höhe des Himmels auftreten.</p>
-    <div class="iframe-container">
-      <iframe src="altocumulus-wolken/index.html" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <section id="nimbostratus">
-    <h2>Nimbostratus Wolken</h2>
-    <p>Nimbostratuswolken sind dichte, dunkle Wolken, die oft mit Regen oder Schneefall verbunden sind und den Himmel vollständig bedecken.</p>
-    <div class="iframe-container">
-      <iframe src="nimbostratus-wolken/index.html" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <section id="cumulus-inter">
-    <h2>Übersetzung</h2>
-   
+  <main>
     
-    <div class="iframe-container">
-      <iframe src="cumulus-inter/index.html" loading="lazy"></iframe>
-    </div>
-    <a href="cumulus-inter/index.html" target="_blank">►</a>
-  </section>
-  <section id="nimbostratus">
-    <h2>Reflektion</h2>
-    <p>In diesem Projekt habe ich verschiedene Wolkentypen beobachtet und ihre charakteristischen Formen, Farben und Bewegungen analysiert. Ziel war es, diese natürlichen Phänomene in abstrakter Weise mithilfe von Code darzustellen. Der Schwerpunkt meiner Arbeit lag dabei auf der sogenannten "Übersetzung" – einer kreativen Auseinandersetzung mit den beobachteten Eindrücken. Durch die Fokussierung auf Bewegung und Farbe entstanden digitale Muster, die das Wesentliche der Wolkenformation einfangen. Diese Verbindung von Naturbeobachtung und algorithmischer Gestaltung bildete den Kern meiner gestalterischen Auseinandersetzung.</p>
-    <div class="image-gallery">
-      <img src="https://hbk-bs.github.io/the-archives-Lynnadam/assets/images/IMG_6852.jpg" alt="Wolkenbild 1">
-      <img src="https://hbk-bs.github.io/the-archives-Lynnadam/assets/images/IMG_6857.jpg" alt="Wolkenbild 3">
-    </div>
-  </section>
 
-</body>
-</html>
+ 
+    <section id="intro" class="content-card">
+      <h2>Introduction</h2>
+      <p>This semester, in the seminar “Fundamentals of Digital Communication,” our main focus was on artificial intelligence and its creative use. We engaged not only with the technical foundations and practice-oriented projects but also with the critical examination of the risks and opportunities of artificial intelligence.</p>
+    </section>
+
+    
+
+
+    <section class="overview" id="projects">
+      <h2>Projects</h2>
+      <div class="grid">
+        <a href="teachable-machine-adam/index.html"class="card"><h3>Teachable Machine</h3></a>
+        <a href="nature-of-code/index.html" class="card"><h3>Nature of Code</h3></a>
+        <a href="text-the-universal-interface/index.html" class="card"><h3>Universal Interface</h3></a>
+        <a href="graphic-novel-adam/" class="card"><h3>Graphic Novel</h3></a>
+        <a href="handouts/index.html" class="card"><h3>Course Materials (German)</h3></a>
+      </div>
+    </section>
+
+
+
+    <section id="htmlcss" class="content-card">
+      <h2>Takeaways</h2>
+     
+
+
+
+      <h3>Theoretical Foundations
+      </h3>
+      <p>
+        This year as well, the topics followed one after another in quick succession. This led on the one hand to a kind of whiplash, but on the other hand also to an important gain in knowledge in the field of artificial intelligence. 
+      </p>
+      <p>
+        At first, however, we dealt with the markup language Markdown, which makes it easy to structure texts clearly and neatly. Over the course of the semester, I realized, however, that I feel more comfortable working with HTML instead of Markdown. Even though Markdown is considerably easier and faster to use, I do not get into a proper workflow with it and feel somewhat more restricted.
+      </p>
+
+      <p>
+        The first real AI tool we got to know was Google’s <a href="handouts/index.html#teachable" target="_blank" class="text-link">Teachable Machine</a>. This tool is very easy to use and thus a very beginner-friendly introduction to training AI models. It did not completely overwhelm us but clearly showed that AI is very dependent on the examples it is given. It also highlighted how important the quality and quantity of the input data are for the outcome.
+      </p>
+      
+      <p>
+        Then we dealt with Large Language Models, a tool for generating texts. Particularly exciting for me in the technical examination was that LLMs at their core simply calculate the probability of the next word part (or token) and do not really think “intelligently.” So it is not really about the content of the texts that the tool writes, but only about the statistical relationships of the tokens.
+      </p>
+
+      <p>
+        After several weeks in which we dealt intensively with AI, the time also came when we examined the ethics behind the application of AI and weighed risks and opportunities in a <a href="handouts/index.html#debateclub" target="_blank" class="text-link">debate</a>. 
+      </p>
+        
+        
+      <p>
+        In summary, one can say that the structure of the topics was very enriching. We touched on how AI actually works, how to properly prepare data for an AI, and also how the AI then processes this data. In addition, we also engaged with the ethical aspect.
+      </p>
+      <h3>Practical Application
+      </h3>
+      <p>
+        This semester the theory was of course again  connected with practical project work. In this context, we worked with <a href="graphic-novel-adam/index.html" target="_blank" class="text-link">image-generation</a>, <a href="teachable-machine-adam/index.html" target="_blank" class="text-link">Teachable Machine</a>, and <a href="text-the-universal-interface/index.html" target="_blank" class="text-link">LLMs</a>, and integrated them into our websites in innovative ways. In addition, we dealt with the translation of <a href="nature-of-code/index.html" target="_blank" class="text-link">natural patterns </a>into code, which was not really related to the topic of AI but strongly challenged my creativity.
+      </p>
+
+      <p>
+        The projects as a whole all combined art and technology, and we were repeatedly reminded to create products that were as unusual as possible and not necessarily useful. I often had an idea for the project rather quickly and then only got a bit tangled up here and there during the implementation. But how so very often it was the case that one learns the most not from success but from the mistakes, which then have to be understood and fixed.
+      </p>
+      <p>
+        Every error in the code was always very exciting, and overall I had a lot of fun with practical coding. And because not too much was expected, we also had the time and calmness to experiment and explore what was actually possible.
+      </p>
+      <h3>Final 
+      </h3>
+
+      <p>At the end of the semester, we once again had the task of compiling all projects into a web archive. I designed mine to be as clear and simple as possible. While most of the texts are in English, I deliberately chose to keep certain parts, such as the course material and the work process description for the Universal Interface project, in German. For me, it was important that the content provided lasting value, and it is simply easier in my native language to internalize concepts — especially when it comes to technical aspects.</p>
+
+      <p>Seeing all projects together on one website now gives me the sense that I have learned a great deal over the past months. Compared to the archive from the previous semester, I also feel that I have improved. At the same time, it motivates me to dive even deeper into the subject and to explore what more I can learn.</p>
+
+    </section>
+
+    
